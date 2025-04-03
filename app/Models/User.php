@@ -23,6 +23,8 @@ class User extends Authenticatable
         'prenom',
         'photo',
         'role',
+        'otp',
+        'otp_expire_at',
         'email',
         'password',
     ];

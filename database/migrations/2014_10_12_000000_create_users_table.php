@@ -16,9 +16,11 @@ return new class extends Migration
             $table->string('nom');
             $table->string('postnom');
             $table->string('prenom');
-            $table->enum('role', ['ADMIN', 'NORMAL']);
+            $table->enum('role', ['ADMIN', 'STANDARD'])->default('STANDARD');
             $table->string('photo')->nullable();
             $table->string('email')->unique();
+            $table->string('otp')->nullable();
+            $table->string('otp_expire_at')->nullable();
             $table->string('password');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
